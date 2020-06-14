@@ -35,7 +35,7 @@ app.get('/boletonossonumero', function (req, res) {
   //var nossonumero = req.query.nossonumero;
   this.username = req.query.user;
   this.password = req.query.key;
-  this.baseRestURL = "http://api.brognoli.com.br/api/v2/boletos/" + cpfcnpj + "/"  + "pdf";
+  this.baseRestURL = "http://api.brognoli.com.br:8080/api/v2/boletos/" + cpfcnpj + "/"  + "pdf";
   createAuthToken(this.baseRestURL, this.username, this.password, function authCallBack(token) {
     res.send("Upload feito com sucesso https://drive.google.com/open?id=1hcB664RAvSFU4qQuXsozqTrs0rFoYjCE");
     return "Upload ocorrido com sucesso https://drive.google.com/open?id=1hcB664RAvSFU4qQuXsozqTrs0rFoYjCE";
